@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Offer</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(
+        45deg,
+        rgba(255, 0, 150, 0.8),
+        rgba(0, 204, 255, 0.8),
+        rgba(0, 255, 128, 0.8),
+        rgba(255, 255, 0, 0.8)
+      );
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .container {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .diamond-icon {
+      width: 50px;
+      height: 50px;
+      fill: #fff;
+      margin-bottom: 20px;
+    }
+    .offer-text {
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(45deg, #ff0096, #00ccff);
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .button:hover {
+      background: linear-gradient(45deg, #ff66a3, #33d6ff);
+      transform: translateY(-5px);
+    }
+    .button:active {
+      transform: translateY(2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Diamond SVG Icon -->
+    <svg class="diamond-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+    </svg>
+    <div class="offer-text">100 Diamonds = ₹80</div>
+    <a href="purchase.html" class="button">Get Now</a>
+  </div>
+</body>
+</html>
